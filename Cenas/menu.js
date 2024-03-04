@@ -7,11 +7,11 @@ class menu extends Phaser.Scene {
         super({ key: 'menu' })
     }
     preload() { //carrega previamente os arquivos
-        this.load.image('lua','assets/Menu/lua.png');
-        this.load.image('title', 'assets/Menu/title.png');
-        this.load.image('bg', 'assets/Menu/bg.png')
-        this.load.image('play', 'assets/Menu/play.png')
-        this.load.image('how', 'assets/Menu/comoJogar.png')
+        this.load.image('lua','../assets/Menu/lua.png');
+        this.load.image('title', '../assets/Menu/title.png');
+        this.load.image('bg', '../assets/Menu/bg.png')
+        this.load.image('play', '../assets/Menu/play.png')
+        this.load.image('how', '../assets/Menu/comoJogar.png')
     }
 
     create() { //adiciona os elementos na tela

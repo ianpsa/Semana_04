@@ -8,7 +8,7 @@ const config = { //configurações do game
         default: 'arcade',
         arcade: {
             gravity: { y: 1200 }, //define a gravidade do jogo
-            debug: true //define se as ferramentas de desenvolvedor são ativadas
+            debug: false //define se as ferramentas de desenvolvedor são ativadas
         }
     },
 

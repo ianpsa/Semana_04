@@ -9,12 +9,12 @@ class level1 extends Phaser.Scene {
 
     preload() {
         /*Pré-carregando Arquivos */
-    inimigo = this.load.image('inimigo', '/assets/inimigo.png');
-    this.load.image('floor', '/assets/grama.png');
-    particula = this.load.image('particula','assets/particula.png');
+    inimigo = this.load.image('inimigo', '../assets/inimigo.png');
+    this.load.image('floor', '../assets/grama.png');
+    particula = this.load.image('particula','../assets/particula.png');
     this.load.image('bg1', '/assets/bg1.png');
-    lut = this.load.spritesheet('lut','/assets/LutadorSpritesheet.png', {frameWidth:370, frameHeight:362, startFrame:0, endFrame:6});
-    cajado = this.load.image('cajado', 'assets/cajado.png');
+    lut = this.load.spritesheet('lut','../assets/LutadorSpritesheet.png', {frameWidth:370, frameHeight:362, startFrame:0, endFrame:6});
+    cajado = this.load.image('cajado', '../assets/cajado.png');
     console.log('preload feito');
 
     }

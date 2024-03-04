@@ -7,12 +7,12 @@ class como extends Phaser.Scene {
         super({ key: 'como' })
     }
     preload() { //carrega previamente os arquivos
-        this.load.image('lua','assets/Menu/lua.png');
-        this.load.image('title', 'assets/Menu/title.png');
-        this.load.image('bg', 'assets/Menu/bg.png');
-        this.load.image('setas','assets/how/setas.png');
-        this.load.image('space','assets/how/space.png');
-        this.load.image('voltar', 'assets/how/voltar.png');
+        this.load.image('lua','../assets/Menu/lua.png');
+        this.load.image('title', '../assets/Menu/title.png');
+        this.load.image('bg', '../assets/Menu/bg.png');
+        this.load.image('setas','../assets/how/setas.png');
+        this.load.image('space','../assets/how/space.png');
+        this.load.image('voltar', '../assets/how/voltar.png');
     }
 
     create() { //adiciona os elementos na tela
