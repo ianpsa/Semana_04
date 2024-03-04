@@ -42,17 +42,17 @@ class level1 extends Phaser.Scene {
 
     /*Adicionando imagens e Sprites */
 
-    lut = this.physics.add.sprite(300, 650, "lut").setScale(0.2).setDepth(3); //adiciona imagem do lutador ao canvas
+    lut = this.physics.add.sprite(300, 650, "lut").setScale(0.2).setDepth(4); //adiciona imagem do lutador ao canvas
     lut.setCollideWorldBounds(true);
 
     this.add.image(400 , 300, 'bg1').setScale(1.2).setDepth(1);
-    this.add.image(400, 170, 'floor').setScale(0.6).setDepth(4);
+    this.add.image(400, 170, 'floor').setScale(0.6).setDepth(3);
     
     particula = this.physics.add.image(800, 600, 'particula').setScale(0.3).setDepth(2)
     particula.body.setSize(150, 150) //define o tamanho da bounding box da particula 
     particula.setCollideWorldBounds(true)
 
-    cajado = this.physics.add.image(400, 700, 'cajado').setScale(0.07).setDepth(3)
+    cajado = this.physics.add.image(400, 700, 'cajado').setScale(0.07).setDepth(5)
     cajado.body.setSize(500, 500) //define o tamanho da bounding box do cajado
     cajado.setCollideWorldBounds(true);
 
@@ -65,7 +65,7 @@ class level1 extends Phaser.Scene {
     inimigo.children.iterate(inimigo => { //define propriedades para cada inimigos (tamanho, bound box, e depth)
         inimigo.setScale(0.07);
         inimigo.body.setSize(400, 400);
-        inimigo.setDepth(3);
+        inimigo.setDepth(6);
     });
 
     this.physics.world.setBounds(0, 0, 800, 750); //define os limites do mundo
@@ -81,7 +81,7 @@ class level1 extends Phaser.Scene {
 
     this.physics.add.overlap(particula, inimigo, kill, null, this); //quando inimigo estiver sobre particula chama a função kill
 
-    Pontos = this.add.text(50, 50, 'Pontos: ' + Pontuacao, { fontSize: '32px', fill: '#ffffff' }).setDepth(3); //adiciona pontuação na tela
+    Pontos = this.add.text(50, 50, 'Pontos: ' + Pontuacao, { fontSize: '32px', fill: '#ffffff' }).setDepth(8); //adiciona pontuação na tela
 
     /*adiciona tela de game over */
     gameOver = this.add.text(400, 300, 'Game Over', { fontSize: '64px', fill: '#ffffff' });
@@ -96,7 +96,7 @@ class level1 extends Phaser.Scene {
 
         var vivo = false //define variável vivo como false já que essa função é executada quando o inimigo esta tocando o player
         console.log('jogador está vivo? ' + vivo) //printa no console a mensagem com o valor da variável
-        gameOver.setVisible(true).setDepth(5); //faz a tela de game over aparecer
+        gameOver.setVisible(true).setDepth(7); //faz a tela de game over aparecer
         lut.disableBody(true).setVisible(false); //faz com que o lutador deixe de ser jogável e suma da tela
 
         setTimeout(() => { //define timout para voltar ao menu e parar a cena atual
